@@ -11,6 +11,22 @@ class TheatersController < ApplicationController
         
     end
 
+    def show
+    theater = Theater.find(params[:id])
+    render json: theater
+
+    end
+
+    def update
+
+    end
+
+    def destroy
+        theater = Theater.find(params[:id])
+        theater.destroy
+        render json: {message: 'Theater deleted'}
+    end
+
     private
 
     def theater_params
