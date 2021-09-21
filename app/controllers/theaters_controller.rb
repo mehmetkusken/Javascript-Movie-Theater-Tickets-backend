@@ -12,12 +12,8 @@ class TheatersController < ApplicationController
     end
 
     def show
-    theater = Theater.find(params[:id])
-    render json: theater
-
-    end
-
-    def update
+        theater = Theater.find(params[:id])
+        render json: theater
 
     end
 
